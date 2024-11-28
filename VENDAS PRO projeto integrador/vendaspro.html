@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas Pro</title>
+    <link rel="stylesheet" href="styles/stylecadastro.css"> <!-- Inclua um arquivo CSS para estilização -->
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <!-- Página de Login -->
+    <div id="login-page">
+        <section id="login">
+            <h1 class="titulo">Login</h1>
+            <form class="formulario formulario__login">
+                <fieldset class="formulario__dentro formulario__login__dentro">
+
+                    <p class="link">Não possui cadastro? <a class="link__ancora" href="1_pagina de login.index.html.html">Faça o cadastro aqui.</a></p>
+
+                    <label for="email">E-mail:</label>
+                    <input class="box box__login" type="email" id="email" name="email" required>
+
+                    <label for="senha">Senha:</label>
+                    <input class="box box__login" type="password" id="senha" name="senha" required>
+
+                    <button class="botao botao__login" type="submit" onclick="event.preventDefault(); showMainPage();">Entrar</button>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+
+    <!-- Página Principal -->
+    <div id="main-page" style="display: none;">
+        <header>
+            <h1>Vendas Pro</h1>
+        </header>
+
+        <div class="container">
+            <aside>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="toggleSection('home')">Home</a></li>
+                        <li><a href="#" onclick="toggleSection('cadastro')">Cadastro</a></li>
+                        <li><a href="#" onclick="toggleSection('estoque')">Estoque</a></li>
+                        <li><a href="#" onclick="toggleSection('pesquisa')">Pesquisa</a></li>
+                        <li><a href="#" onclick="toggleSection('sair')">Sair</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <!-- Seção de Home -->
+                <section id="home" style="display: block;">
+                    <h1>Bem-vindo ao Vendas Pro</h1>
+                    <p>.</p>
+                </section>
+
+                <!-- Seção de Cadastro -->
+                <section id="cadastro" style="display: none;">
+                    <h2>Cadastro de Usuário/Administrador</h2>
+                    <form>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+
+                        <label for="tipo">Tipo de Usuário:</label>
+                        <select id="tipo" name="tipo">
+                            <option value="usuario">Usuário</option>
+                            <option value="administrador">Administrador</option>
+                        </select>
+
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </section>
+
+                <!-- Seção de Estoque -->
+                <section id="estoque" style="display: none;">
+                    <h2>Estoque</h2>
+                    <p>Visualize e gerencie o estoque de produtos.</p>
+                    <ul>
+                        <li>Produto 1 - Quantidade: 10</li>
+                        <li>Produto 2 - Quantidade: 5</li>
+                        <li>Produto 3 - Quantidade: 20</li>
+                    </ul>
+                </section>
+
+                <!-- Seção de Pesquisa -->
+                <section id="pesquisa" style="display: none;">
+                    <h2>Pesquisa</h2>
+                    <form>
+                        <label for="pesquisa">Buscar Produto:</label>
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite o nome do produto">
+                        <button type="submit">Pesquisar</button>
+                    </form>
+                </section>
+
+                <!-- Seção de Sair -->
+                <section id="sair" style="display: none;">
+                    <h2>Sair</h2>
+                    <p>Deseja sair do sistema? <a href="logout.html">Clique aqui</a>.</p>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <p>.</p>
+        </footer>
+    </div>
+
+    <script>
+        function showMainPage() {
+            document.getElementById('login-page').style.display = 'none';
+            document.getElementById('main-page').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

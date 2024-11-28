@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/stylecadastro.css">
+    <title>Cadastro de Usuários</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Cadastro de Usuários</h1>
+    </header>
+
+    <main>
+        <form class="formulario" action="cadastrar_usuario.php" method="POST">
+            <fieldset class="formulario__dentro">
+                <legend>Informações do Usuário</legend>
+
+                <p class="link">Já possui cadastro? <a class="link__ancora" href="vendaspro.html">Faça login aqui.</a></p>
+
+                <label for="nome">Nome Completo:</label><br>
+                <input class="box" type="text" id="nome" name="nome" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input class="box" type="email" id="email" name="email" required><br><br>
+
+                <label for="senha">Senha:</label><br>
+                <input class="box" type="password" id="senha" name="senha" required><br><br>
+
+                <label for="tipoUsuario">Tipo de Usuário:</label><br>
+                <select class="box__escolha" id="tipoUsuario" name="tipoUsuario" required>
+                    <option class="box__escolha" value="cliente">Cliente</option>
+                    <option class="box__escolha" value="funcionario">Funcionário</option>
+                </select><br><br>
+
+                <button class="botao" type="submit">Cadastrar</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

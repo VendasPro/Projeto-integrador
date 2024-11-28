@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+    --cor-principal: #F4F9F9;
+    --cor-secundaria: #F9F9F9;
+    --cor-botao: #A4EBF3;
+    --fonte: "Roboto Mono", monospace;
+
+}
+
+body{
+    font-size: 1em;
+    font-family: var(--fonte);
+    background-color: var(--cor-secundaria);
+}
+
+fieldset{
+    width: 16em;
+    height: 22em;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario__dentro{
+    background-color: var(--cor-principal);
+}
+
+.box{
+    border-radius: 10px;
+    width: 17em;
+}
+
+.box__escolha {
+    border-radius: 10px;
+}
+
+.botao{
+    border-radius: 10px;
+    background-color: var(--cor-botao);
+    width: 6em;
+}
+.botao:hover{
+    background-color: var(--cor-secundaria);
+}
+
+.link {
+    font-size: 0.7em;
+}
+
+.link__ancora {
+    text-decoration: none;
+}
+.link__ancora:hover{
+    color: var(--cor-botao);
+}
+
+.botao__login{
+    margin-top: 1em;
+}
+
+.formulario__login__dentro {
+    height: 15em;
+}
+
+.box__login {
+    margin-bottom: 1em;
+}

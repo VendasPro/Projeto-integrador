@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleindex.css">
+    <title>Controle de Vendas</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Controle de Vendas</h1>
+    </header>
+
+    <main>
+        <form class="formulario" action="registrar_venda.php" method="POST">
+            <fieldset class="formulario__dentro">
+                <legend>Registrar Nova Venda</legend>
+
+                <label for="produto">Nome do Produto:</label><br>
+                <input class="box" type="text" id="produto" name="produto" required><br><br>
+
+                <label for="quantidade">Quantidade:</label><br>
+                <input class="box" type="text" id="quantidade" name="quantidade" inputmode="numeric" pattern="[0-9]*" required><br><br>
+
+                <label for="preco">Preço Unitário:</label><br>
+                <input class="box" type="text" id="preco" name="preco" inputmode="decimal" pattern="[0-9]+([,][0-9]{1,2})?" required><br><br>
+
+                <label for="cliente">Nome do Cliente:</label><br>
+                <input class="box" type="text" id="cliente" name="cliente" required><br><br>
+
+                <label for="data">Data da Venda:</label><br>
+                <input class="box__data" type="date" id="data" name="data" required><br><br>
+
+                <button class="botao" type="submit">Registrar Venda</button>
+            </fieldset>
+        </form>
+        
+        <br><hr><br>
+
+        <section>
+            <h2 class="titulo">Histórico de Vendas</h2>
+            <p class="texto">Essa seção pode ser preenchida com informações do banco de dados, exibindo as vendas registradas.</p>
+            <!-- Exemplo de tabela de vendas -->
+            <div class="div-tabela">
+                <table class="tabela" border="1">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Preço Unitário</th>
+                            <th>Cliente</th>
+                            <th>Data</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Exemplo Produto</td>
+                            <td>2</td>
+                            <td>50,00</td>
+                            <td>João Silva</td>
+                            <td>2024-10-25</td>
+                            <td>100,00</td>
+                        </tr>
+                        <!-- Outras vendas podem ser inseridas dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
